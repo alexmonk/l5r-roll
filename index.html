@@ -1,91 +1,27 @@
 <script type="text/javascript">
+function getDice(num)
+{
+	var d = num;
+	while (d == num)
+	{
+		d = Number(Math.floor(Math.random() * num));
+	}
+	return d;
+}
+
 function rollBlack()
 {
-	var d6 = Number(Math.ceil(Math.random() * 6));
-	var result = "";
-	switch (d6)
-	{
-		case 1:
-			result = "1";
-		break;
-			
-		case 2:
-			result = "2";
-		break;
-			
-		case 3:
-			result = "3";
-		break;
-			
-		case 4:
-			result = "4";
-		break;
-			
-		case 5:
-			result = "5";
-		break;
-			
-		case 6:
-			result = "6";
-		break;
-	}
+	var results = ["0", "1", "2", "3", "4", "5"];
+	var d6 = getDice(6);
+	var text = results[d6];
 	return "b" + text + " ";
 }
 	
 function rollWhite()
 {	
-	var d6 = Number(Math.ceil(Math.random() * 12));
-	var result = "";
-	switch (d6)
-	{
-		case 1:
-			result = "1";
-		break;
-			
-		case 2:
-			result = "2";
-		break;
-			
-		case 3:
-			result = "3";
-		break;
-			
-		case 4:
-			result = "4";
-		break;
-			
-		case 5:
-			result = "5";
-		break;
-			
-		case 6:
-			result = "6";
-		break;
-			
-		case 7:
-			result = "7";
-		break;
-			
-		case 8:
-			result = "8";
-		break;
-			
-		case 9:
-			result = "9";
-		break;
-			
-		case 10:
-			result = "10";
-		break;
-			
-		case 11:
-			result = "11";
-		break;
-			
-		case 12:
-			result = "12";
-		break;
-	}
+	var results = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
+	var d12 = getDice(12);
+	var text = results[d12];
 	return "w" + text + " ";
 }
 	
@@ -115,7 +51,7 @@ function roll()
 </script>
 
 <body>
-ver 0.02<br/>
+ver 0.03<br/>
 	
 Black (ring):
   <select id="black_dice">
