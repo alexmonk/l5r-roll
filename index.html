@@ -45,7 +45,7 @@ function roll()
 	var black = document.getElementById("black_dice");
 	var blackNum = Number(black.options[black.selectedIndex].value);
   
-  	var white = document.getElementById("white_dice");
+	var white = document.getElementById("white_dice");
 	var whiteNum = Number(white.options[white.selectedIndex].value);
   
 	var resultText = "";
@@ -63,11 +63,9 @@ function roll()
 	var rollResults = document.getElementById("roll_results");
 	rollResults.innerHTML = resultText;
 	
-	/*
-	suc : "https://i.imgur.com/NsXSIhS.png",
-	adv : "https://i.imgur.com/I0aoX2W.png",
-	strife : "https://i.imgur.com/aQ0UcQS.png"
-	*/
+	var suc = "https://i.imgur.com/NsXSIhS.png";
+	var adv = "https://i.imgur.com/I0aoX2W.png";
+	var strife = "https://i.imgur.com/aQ0UcQS.png";
 }
 </script>
 
