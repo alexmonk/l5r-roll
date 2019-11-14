@@ -1,3 +1,43 @@
+<script type="text/javascript">
+function roll()
+{
+	var black = document.getElementById("black_dice");
+	var blackNum = Number(black.options[black.selectedIndex].value);
+  
+  	var white = document.getElementById("white_dice");
+	var whiteNum = Number(white.options[white.selectedIndex].value);
+  
+    alert(blackNum + whiteNum);
+}
+</script>
+
 <body>
-Something
+Black (ring):
+  <select id="black_dice">
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+   </select>
+  
+White (skill):
+<select id="white_dice">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+ </select>
+  
+<input type="button" value="Roll" onclick="javascript:roll(); return false;">
+  
+<br/>
+----------------------------------------------
+<br/>
+
+
 </body>
