@@ -1,4 +1,14 @@
 <script type="text/javascript">
+function rollBlack()
+{
+	return "b";
+}
+	
+function rollWhite()
+{
+	return "w";
+}
+	
 function roll()
 {
 	var black = document.getElementById("black_dice");
@@ -7,7 +17,20 @@ function roll()
   	var white = document.getElementById("white_dice");
 	var whiteNum = Number(white.options[white.selectedIndex].value);
   
-    alert(blackNum + whiteNum);
+	var resultText = "";
+	
+	for (let i = 0; i < blackNum; i++)
+	{
+		resultText += rollBlack();
+	}
+	
+	for (let i = 0; i < whiteNum; i++)
+	{
+		resultText += rollWhite();
+	}
+	
+	var rollResults = document.getElementById("roll_results");
+	rollResults.innerHTML = resultText;
 }
 </script>
 
@@ -39,5 +62,6 @@ White (skill):
 ----------------------------------------------
 <br/>
 
-
+<div id="roll_results"></div>
+	
 </body>
