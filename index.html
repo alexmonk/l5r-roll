@@ -11,18 +11,33 @@ function getDice(num)
 
 function rollBlack()
 {
-	var results = ["0", "1", "2", "3", "4", "5"];
+	var blank = "https://i.imgur.com/rCOzYAB.png";
+	var advStrife = "https://i.imgur.com/VZwMdVG.png";
+	var adv = "https://i.imgur.com/rONlOmw.png";
+	var sucStrife = "https://i.imgur.com/uFCPCR7.png";
+	var suc = "https://i.imgur.com/YR28QCA.png";
+	var sucXStrife = "https://i.imgur.com/tziXIv5.png";
+	
+	var results = [blank, advStrife, adv, sucStrife, suc, sucXStrife];
 	var d6 = getDice(6);
-	var text = results[d6];
-	return "b" + text + " ";
+	var src = results[d6];
+	return "<img src=\"" + src + "\" />";
 }
 	
 function rollWhite()
 {	
-	var results = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
+	var blank = "https://i.imgur.com/KGQK8Oa.png",
+	var adv = "https://i.imgur.com/ugYCuhM.png";
+	var sucStrife = "https://i.imgur.com/jk4Fhhb.png";
+	var suc = "https://i.imgur.com/RgHzmr5.png";
+	var sucAdv : "https://i.imgur.com/KbeuQoj.png";
+	var sucXStrife = "https://i.imgur.com/NgBZyvz.png";
+	var sucX = "https://i.imgur.com/MPudmqf.png";
+	
+	var results = [blank, blank, adv, adv, adv, sucStrife, sucStrife, suc, suc, sucAdv, sucXStrife, sucX];
 	var d12 = getDice(12);
 	var text = results[d12];
-	return "w" + text + " ";
+	return "<img src=\"" + src + "\" />";
 }
 	
 function roll()
@@ -47,11 +62,17 @@ function roll()
 	
 	var rollResults = document.getElementById("roll_results");
 	rollResults.innerHTML = resultText;
+	
+	/*
+	suc : "https://i.imgur.com/NsXSIhS.png",
+	adv : "https://i.imgur.com/I0aoX2W.png",
+	strife : "https://i.imgur.com/aQ0UcQS.png"
+	*/
 }
 </script>
 
 <body>
-ver 0.03<br/>
+ver 0.04<br/>
 	
 Black (ring):
   <select id="black_dice">
