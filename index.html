@@ -18,7 +18,8 @@ function rollBlack()
 	var suc = "https://i.imgur.com/YR28QCA.png";
 	var sucXStrife = "https://i.imgur.com/tziXIv5.png";
 	
-	var results = [blank, advStrife, adv, sucStrife, suc, sucXStrife];
+	//var results = [blank, advStrife, adv, sucStrife, suc, sucXStrife];
+	var results = ["0", "0", "0", "0", "0", "0"];
 	var d6 = getDice(6);
 	var src = results[d6];
 	return "<img src='" + src + "' />";
@@ -34,7 +35,8 @@ function rollWhite()
 	var sucXStrife = "https://i.imgur.com/NgBZyvz.png";
 	var sucX = "https://i.imgur.com/MPudmqf.png";
 	
-	var results = [blank, blank, adv, adv, adv, sucStrife, sucStrife, suc, suc, sucAdv, sucXStrife, sucX];
+	//var results = [blank, blank, adv, adv, adv, sucStrife, sucStrife, suc, suc, sucAdv, sucXStrife, sucX];
+	var results = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
 	var d12 = getDice(12);
 	var text = results[d12];
 	return "<img src='" + src + "' />";
@@ -70,7 +72,7 @@ function roll()
 </script>
 
 <body>
-ver 0.05<br/>
+ver 0.06<br/>
 	
 Black (ring):
   <select id="black_dice">
